@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Elena Rostova",
+    "email": "elena.rostova@letoile-dining.com",
+    "password": "password123",
+    "shippingAddress": "Le Étoile Restaurant, 452 Haute Cuisine Blvd, Paris, France",
+    "registeredAt": "2026-05-19T10:00:00.000Z"
+  },
+  {
+    "name": "Marcus Thorne",
+    "email": "mthorne@alchemistwellness.co",
+    "password": "password123",
+    "shippingAddress": "Aura Wellness Retreat, 108 Serenity Lane, Big Sur, CA 93920",
+    "registeredAt": "2026-05-20T05:00:00.000Z"
+  },
+  {
+    "name": "Sophia Laurent",
+    "email": "sophia@laurent-estates.com",
+    "password": "password123",
+    "shippingAddress": "Laurent Vineyard Manor, 88 Grand Cru Way, Napa Valley, CA 94558",
+    "registeredAt": "2026-05-20T12:00:00.000Z"
+  }
+]

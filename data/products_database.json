@@ -1,0 +1,53 @@
+[
+  {
+    "id": "wild-forest",
+    "name": "WILD FOREST",
+    "subName": "Deep Amber Nectar",
+    "color": "#ffb703",
+    "gradient": "from-[#ffb703] to-[#e85d04]",
+    "price": 45,
+    "description": "Harvested from oak, pine and wild blackberry blossoms. It offers a robust, dark-spiced profile with a lingering woody finish.",
+    "characteristics": [
+      "Rich in Minerals",
+      "Bold & Woody",
+      "Slow-Crystallizing"
+    ],
+    "rarity": "Limited Harvest",
+    "bgGlow": "rgba(255, 183, 3, 0.15)",
+    "stock": 24
+  },
+  {
+    "id": "clover-blossom",
+    "name": "CLOVER BLOSSOM",
+    "subName": "Golden Meadow Sweetness",
+    "color": "#ffd166",
+    "gradient": "from-[#ffd166] to-[#ffb703]",
+    "price": 38,
+    "description": "Delicate, sweet floral notes gathered from white clover fields. It features a bright, buttery mouthfeel with hints of fresh grass and vanilla.",
+    "characteristics": [
+      "Everyday Luxury",
+      "Sweet & Creamy",
+      "Bright Floral Notes"
+    ],
+    "rarity": "Seasonal Run",
+    "bgGlow": "rgba(255, 209, 102, 0.15)",
+    "stock": 58
+  },
+  {
+    "id": "black-truffle",
+    "name": "ROYAL BLACK",
+    "subName": "Black Truffle Infusion",
+    "color": "#b07d08",
+    "gradient": "from-[#3a2307] to-[#120a02]",
+    "price": 85,
+    "description": "An elite infusion of raw wild honey with premium Italian black winter truffles. Creates a sophisticated savory-sweet complexity.",
+    "characteristics": [
+      "Ultra Rare Reserve",
+      "Savory & Earthy",
+      "Gourmet Pairing"
+    ],
+    "rarity": "Reserve Release (100 Jars)",
+    "bgGlow": "rgba(176, 125, 8, 0.1)",
+    "stock": 12
+  }
+]

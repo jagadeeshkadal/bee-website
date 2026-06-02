@@ -1,0 +1,54 @@
+[
+  {
+    "orderNumber": "BEE-749203-GOLD",
+    "productId": "black-truffle",
+    "productName": "ROYAL BLACK",
+    "quantity": 2,
+    "unitPrice": 85,
+    "totalAmount": 170,
+    "customerName": "Elena Rostova",
+    "customerEmail": "elena.rostova@letoile-dining.com",
+    "shippingAddress": "Le Étoile Restaurant, 452 Haute Cuisine Blvd, Paris, France",
+    "timestamp": "2026-05-19T14:32:10.450Z",
+    "status": "Confirmed"
+  },
+  {
+    "orderNumber": "BEE-284910-GOLD",
+    "productId": "wild-forest",
+    "productName": "WILD FOREST",
+    "quantity": 3,
+    "unitPrice": 45,
+    "totalAmount": 135,
+    "customerName": "Marcus Thorne",
+    "customerEmail": "mthorne@alchemistwellness.co",
+    "shippingAddress": "Aura Wellness Retreat, 108 Serenity Lane, Big Sur, CA 93920",
+    "timestamp": "2026-05-20T08:15:22.180Z",
+    "status": "Confirmed"
+  },
+  {
+    "orderNumber": "BEE-930485-GOLD",
+    "productId": "clover-blossom",
+    "productName": "CLOVER BLOSSOM",
+    "quantity": 5,
+    "unitPrice": 38,
+    "totalAmount": 190,
+    "customerName": "Sophia Laurent",
+    "customerEmail": "sophia@laurent-estates.com",
+    "shippingAddress": "Laurent Vineyard Manor, 88 Grand Cru Way, Napa Valley, CA 94558",
+    "timestamp": "2026-05-20T17:45:00.000Z",
+    "status": "Confirmed"
+  },
+  {
+    "orderNumber": "BEE-104928-GOLD",
+    "productId": "black-truffle",
+    "productName": "ROYAL BLACK",
+    "quantity": 1,
+    "unitPrice": 85,
+    "totalAmount": 85,
+    "customerName": "Alexander Pierce",
+    "customerEmail": "a.pierce@pierce-holdings.ch",
+    "shippingAddress": "Villa Serene, Via Castagnola 12, Lugano, 6900, Switzerland",
+    "timestamp": "2026-05-21T02:22:45.910Z",
+    "status": "Confirmed"
+  }
+]

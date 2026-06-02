@@ -1,0 +1,71 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Product {
+  id              Int      @id @default(autoincrement())
+  idKey           String   @unique
+  name            String
+  subName         String
+  color           String
+  gradient        String
+  price           Float
+  description     String
+  characteristics String   // Comma-separated list e.g. "Rich in Minerals, Bold & Woody"
+  rarity          String
+  bgGlow          String
+  stock           Int
+  image           String?  // Optional image URL
+  createdAt       DateTime @default(now())
+}
+
+model User {
+  id              Int      @id @default(autoincrement())
+  name            String
+  email           String   @unique
+  password        String
+  phone           String?  // Optional phone number
+  shippingAddress String
+  registeredAt    DateTime @default(now())
+}
+
+model Order {
+  orderNumber     String   @id // e.g. BEE-123456-GOLD
+  productId       String
+  productName     String
+  quantity        Int
+  unitPrice       Float
+  totalAmount     Float
+  customerName    String
+  customerEmail   String
+  customerPhone   String?  // Optional customer phone number
+  shippingAddress String
+  timestamp       DateTime @default(now())
+  status          String   @default("Pending Approval")
+}
+
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String
+  message   String
+  createdAt DateTime @default(now())
+}
+
+model Testimonial {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String
+  review    String
+  rating    Int
+  createdAt DateTime @default(now())
+}

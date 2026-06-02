@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
+@theme {
+  --color-honey-gold: #ffb703;
+  --color-warm-yellow: #ffd166;
+  --color-black: #0b0b0b;
+  --color-dark-bg: #121212;
+  --color-nature-green: #2d6a4f;
+  --color-soft-cream: #fefae0;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 254, 250, 224; /* soft-cream */
+  --background-start-rgb: 11, 11, 11; /* black */
+  --background-end-rgb: 18, 18, 18; /* dark-bg */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: #0b0b0b;
+  overflow-x: hidden;
+  font-family: 'Outfit', 'Inter', sans-serif;
 }
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 183, 3, 0.45);
+  }
+
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 7s ease-in-out infinite;
+    animation-delay: 3.5s;
+  }
+
+  .hover-glow {
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hover-glow:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px -12px rgba(255, 183, 3, 0.22);
+    border-color: rgba(255, 183, 3, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Luxury border glow overlay animation */
+  .luxury-border-glow {
+    position: relative;
+  }
+  .luxury-border-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(135deg, rgba(255, 183, 3, 0) 30%, rgba(255, 183, 3, 0.35) 50%, rgba(255, 183, 3, 0) 70%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    transition: background-position 0.8s ease;
+  }
+  .luxury-border-glow:hover::before {
+    background-position: 100% 50%;
+  }
+
+  /* 3D Glass tilt light reflection overlay */
+  .glass-reflection {
+    position: relative;
+    overflow: hidden;
+  }
+  .glass-reflection::after {
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -150%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    transition: transform 0.8s ease;
+    pointer-events: none;
+  }
+  .glass-reflection:hover::after {
+    transform: translate(30%, 30%);
+  }
+
+  /* Atmospheric volumetric mist */
+  .amber-fog-overlay {
+    background: radial-gradient(
+      circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 183, 3, 0.08) 0%,
+      rgba(255, 183, 3, 0.02) 40%,
+      transparent 80%
+    );
+    pointer-events: none;
+  }
+
+  /* Animated gold particles */
+  .pollen-bloom {
+    background-image: radial-gradient(rgba(255, 183, 3, 0.35) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  66% {
+    transform: translateY(4px) rotate(-0.5deg);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0b; 
+}
+::-webkit-scrollbar-thumb {
+  background: #ffb703; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd166; 
+}
+
